@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold War Perspectives (Printable)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset & Typography */
+        body {
+            font-family: 'Merriweather', serif;
+            color: black;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        /* Layout Container */
+        .article-container {
+            max-width: 21cm;
+            margin: 2rem auto;
+            padding: 2cm;
+            border: 1px solid #ddd;
+            min-height: 29.7cm; /* A4 height */
+            box-sizing: border-box;
+            background: white;
+        }
+
+        /* --- SOVIET STYLE (Article 1) --- */
+        .soviet-header {
+            font-family: 'Oswald', sans-serif;
+            border-bottom: 8px solid black;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .soviet-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+        .soviet-sub {
+            font-size: 1.2rem;
+            font-weight: 400;
+            background: black;
+            color: white;
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .soviet-h3 {
+            font-family: 'Oswald', sans-serif;
+            border-left: 6px solid black;
+            padding-left: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* --- USA STYLE (Article 2) --- */
+        .usa-header {
+            text-align: center;
+            border-bottom: 1px solid black;
+            border-top: 4px double black;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .usa-title {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .usa-sub {
+            font-style: italic;
+            font-family: sans-serif;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            color: #444;
+        }
+        .usa-h3 {
+            font-family: sans-serif;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        /* --- UTILS --- */
+        .columns {
+            column-count: 2;
+            column-gap: 2rem;
+        }
+        
+        /* PRINT SPECIFIC SETTINGS */
+        @media print {
+            @page {
+                margin: 0.2cm;
+                size: auto;
+            }
+            
+            /* Explicitly hide elements with class .no-print */
+            .no-print {
+                display: none !important;
+            }
+
+            body { 
+                background: white;
+                margin: 0; 
+                padding: 0;
+                font-size: 11pt;
+            }
+            
+            .article-container {
+                border: none;
+                margin: 0;
+                padding: 1.5cm 2cm;
+                width: 100%;
+                max-width: none;
+                page-break-after: always;
+                min-height: 100vh;
+                box-shadow: none;
+            }
+            
+            .article-container:last-child {
+                page-break-after: auto;
+            }
+            
+            p {
+                margin-bottom: 0.5em;
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Control Panel -->
+    <div class="no-print fixed top-0 left-0 w-full bg-gray-100 border-b border-gray-300 p-4 flex justify-between items-center z-50">
+        <div>
+            <h1 class="text-lg font-bold">Cold War Articles (B/W Edition)</h1>
+            <p class="text-xs text-gray-600">Tip: Download this file for best print results.</p>
+        </div>
+        
+        <!-- Updated Button without inline onclick -->
+        <button id="printBtn" class="bg-black text-white px-6 py-2 rounded font-bold hover:bg-gray-800 transition cursor-pointer flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            PRINT NOW
+        </button>
+    </div>
+
+    <div class="h-20 no-print"></div>
+
+    <!-- ARTICLE 1: SOVIET PERSPECTIVE -->
+    <div class="article-container">
+        <header class="soviet-header">
+            <div class="soviet-title">The Triumph of the Collective</div>
+            <div class="soviet-sub">Perspective A: State-Led Progress</div>
+        </header>
+
+        <p class="italic mb-6 font-bold text-sm">How a unified state can achieve the impossible by prioritizing the common good over individual profit.</p>
+
+        <div class="columns text-sm text-justify">
+            <h3 class="soviet-h3" style="margin-top:0;">The Power of Planning</h3>
+            <p>During the Cold War, the Soviet Union demonstrated to the world that a society built on cooperation and state planning could outpace the chaotic nature of capitalism. While the West relied on private companies competing for profit, the USSR focused its entire national energy on scientific advancement for the benefit of the people. This centralized approach allowed for rapid industrialization, transforming a peasant society into a superpower in just a few decades.</p>
+
+            <h3 class="soviet-h3">First to the Stars</h3>
+            <p>The proof of this system's success was the Space Race. In 1957, the USSR launched <strong>Sputnik 1</strong>, the first artificial satellite. This was followed by an even greater victory: sending Yuri Gagarin into space in 1961. These were not just technical achievements; they were symbols of collective effort. By removing the barriers of corporate secrets, Soviet scientists shared knowledge freely, accelerating progress without the need for commercial gain.</p>
+
+            <h3 class="soviet-h3">Ambition and The State</h3>
+            <p>Critics often ask: "What about the individual?" In the Soviet system, ambition was redirected. High achievers were celebrated with national honor and security, not personal wealth. A scientist who excelled had a secure future and the respect of their peers. This proved that you don't need the threat of poverty or the stress of "winning" a market to motivate people to progress.</p>
+
+            <h3 class="soviet-h3">The Burden of Winning</h3>
+            <p>However, this intense competition had a dark side. To maintain the lead, the state had to prioritize military and space technology over consumer goods. While the nation won the "race" for rockets, many citizens faced shortages of basic goods. The pressure to appear superior meant that mistakes were often hidden, creating a culture of secrecy where the fear of "underperforming" against the West led to dangerous shortcuts. For example, during the mission of <strong>Soyuz 1</strong> in 1967, the rush to launch for the 50th anniversary of the Revolution resulted in tragedy. Political deadlines led to warnings being ignored, and cosmonaut Vladimir Komarov died due to parachute failure.</p>
+        </div>
+
+        <div class="mt-6 p-4 border-2 border-black bg-gray-100">
+            <h4 class="font-bold uppercase text-xs mb-1">Key Concepts</h4>
+            <p class="text-sm font-sans">Centralized Planning &bull; Collective Effort &bull; Meritocracy &bull; State Secrecy</p>
+        </div>
+    </div>
+
+    <!-- ARTICLE 2: USA PERSPECTIVE -->
+    <div class="article-container">
+        <header class="usa-header">
+            <div class="usa-title">The Free Market Frontier</div>
+            <div class="usa-sub">Perspective B: Innovation & Liberty</div>
+        </header>
+
+        <p class="text-center italic mb-6 text-sm">Why freedom, competition, and individual ambition create the ultimate engine for human achievement.</p>
+
+        <div class="space-y-3 text-sm text-justify">
+            <div>
+                <h3 class="usa-h3" style="margin-top:0;">The Spirit of Enterprise</h3>
+                <p>The American success story is a testament to the power of the individual. Unlike top-down control, the United States bet on the creativity of its people. The philosophy was simple: when people are free to compete and profit from their ideas, they work harder and dream bigger. This "free market" system turned the US into the world's largest economy, flooding households with new technologies that improved daily life.</p>
+            </div>
+
+            <div>
+                <h3 class="usa-h3">Winning the Moon Race</h3>
+                <p>While the USSR took an early lead with Sputnik and Gagarin, the flexibility of the American system allowed it to adapt and win. NASA didn't work alone; it partnered with thousands of private contractors who competed to build the best components. This blend of public goal-setting and private innovation proved superior. Landing a man on the moon with Apollo 11 in 1969 was a victory for a system that rewards risk-taking and ingenuity.</p>
+            </div>
+
+            <div>
+                <h3 class="usa-h3">No Ceiling on Potential</h3>
+                <p>The American system promised that if you worked harder than others, you could progress further. There was no "ceiling" on your potential. This promise of unlimited personal advancement motivated people to push boundaries in business, science, and art. The burning desire to excel and be rewarded is what truly drives human progress and prevents the stagnation seen in less competitive societies.</p>
+            </div>
+
+            <div>
+                <h3 class="usa-h3">The Cost of Constant Pressure</h3>
+                <p>Yet, this high-stakes rivalry came with a heavy price. The constant need to outperform the Soviets created an atmosphere of national anxiety. This "pressure cooker" environment led to the Arms Race, where trillions of dollars were spent on nuclear weapons. For the individuals involved, the "race" was often exhausting; the fear of falling behind meant that many scientists and citizens lived under a shadow of intense stress, where failure was seen not just as a mistake, but as a defeat for freedom itself.</p>
+            </div>
+        </div>
+
+        <div class="mt-6 border-t border-b border-black py-4 text-center">
+            <h4 class="font-sans font-bold text-sm uppercase text-gray-500">Class Discussion Task</h4>
+            <p class="italic mt-1 text-sm">Is a system that drives rapid progress worth the "hidden costs" of stress, secrecy, or wasted resources? How do we find a balance between competing to win and cooperating to survive?</p>
+        </div>
+    </div>
+
+    <!-- Script added at the end as requested -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const printBtn = document.getElementById("printBtn");
+            if (printBtn) {
+                printBtn.addEventListener("click", function () {
+                    window.print();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
