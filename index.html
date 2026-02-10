@@ -12,7 +12,7 @@
             font-family: 'Merriweather', serif;
             color: black;
             background-color: #ffffff;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         /* Layout Container */
@@ -30,18 +30,18 @@
         .soviet-header {
             font-family: 'Oswald', sans-serif;
             border-bottom: 8px solid black;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
         .soviet-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
         }
         .soviet-sub {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 400;
             background: black;
             color: white;
@@ -53,9 +53,9 @@
             font-family: 'Oswald', sans-serif;
             border-left: 6px solid black;
             padding-left: 0.5rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -65,12 +65,12 @@
             text-align: center;
             border-bottom: 1px solid black;
             border-top: 4px double black;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
         }
         .usa-title {
             font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 900;
             letter-spacing: -0.5px;
         }
@@ -84,9 +84,9 @@
         .usa-h3 {
             font-family: sans-serif;
             font-weight: 700;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
             text-decoration: underline;
             text-decoration-thickness: 2px;
         }
@@ -94,7 +94,21 @@
         /* --- UTILS --- */
         .columns {
             column-count: 2;
-            column-gap: 2rem;
+            column-gap: 1.5rem;
+        }
+
+        /* Concept Definitions Styling */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+        .concept-item strong {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            margin-bottom: 0.1rem;
         }
         
         /* PRINT SPECIFIC SETTINGS */
@@ -103,19 +117,15 @@
                 margin: 0.2cm;
                 size: auto;
             }
-            
-            /* Explicitly hide elements with class .no-print */
-            .no-print {
-                display: none !important;
-            }
-
             body { 
                 background: white;
                 margin: 0; 
                 padding: 0;
-                font-size: 11pt;
+                font-size: 10pt; /* Slightly smaller to accommodate definitions */
             }
-            
+            .no-print { 
+                display: none !important; 
+            }
             .article-container {
                 border: none;
                 margin: 0;
@@ -126,11 +136,9 @@
                 min-height: 100vh;
                 box-shadow: none;
             }
-            
             .article-container:last-child {
                 page-break-after: auto;
             }
-            
             p {
                 margin-bottom: 0.5em;
                 text-align: justify;
@@ -146,8 +154,6 @@
             <h1 class="text-lg font-bold">Cold War Articles (B/W Edition)</h1>
             <p class="text-xs text-gray-600">Tip: Download this file for best print results.</p>
         </div>
-        
-        <!-- Updated Button without inline onclick -->
         <button id="printBtn" class="bg-black text-white px-6 py-2 rounded font-bold hover:bg-gray-800 transition cursor-pointer flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             PRINT NOW
@@ -163,7 +169,7 @@
             <div class="soviet-sub">Perspective A: State-Led Progress</div>
         </header>
 
-        <p class="italic mb-6 font-bold text-sm">How a unified state can achieve the impossible by prioritizing the common good over individual profit.</p>
+        <p class="italic mb-4 font-bold text-sm">How a unified state can achieve the impossible by prioritizing the common good over individual profit.</p>
 
         <div class="columns text-sm text-justify">
             <h3 class="soviet-h3" style="margin-top:0;">The Power of Planning</h3>
@@ -180,8 +186,25 @@
         </div>
 
         <div class="mt-6 p-4 border-2 border-black bg-gray-100">
-            <h4 class="font-bold uppercase text-xs mb-1">Key Concepts</h4>
-            <p class="text-sm font-sans">Centralized Planning &bull; Collective Effort &bull; Meritocracy &bull; State Secrecy</p>
+            <h4 class="font-bold uppercase text-xs mb-2 border-bottom border-black">Key Concepts for Discussion</h4>
+            <div class="concept-grid font-sans">
+                <div class="concept-item">
+                    <strong>Centralized Planning</strong>
+                    The government controls all major economic decisions and resources.
+                </div>
+                <div class="concept-item">
+                    <strong>Collective Effort</strong>
+                    Working together as a whole nation rather than for individual gain.
+                </div>
+                <div class="concept-item">
+                    <strong>Meritocracy</strong>
+                    A system where advancement is based on ability and talent, supported by the state.
+                </div>
+                <div class="concept-item">
+                    <strong>State Secrecy</strong>
+                    Hiding failures or weaknesses to protect the nation's image.
+                </div>
+            </div>
         </div>
     </div>
 
@@ -192,7 +215,7 @@
             <div class="usa-sub">Perspective B: Innovation & Liberty</div>
         </header>
 
-        <p class="text-center italic mb-6 text-sm">Why freedom, competition, and individual ambition create the ultimate engine for human achievement.</p>
+        <p class="text-center italic mb-4 text-sm">Why freedom, competition, and individual ambition create the ultimate engine for human achievement.</p>
 
         <div class="space-y-3 text-sm text-justify">
             <div>
@@ -216,9 +239,28 @@
             </div>
         </div>
 
-        <div class="mt-6 border-t border-b border-black py-4 text-center">
-            <h4 class="font-sans font-bold text-sm uppercase text-gray-500">Class Discussion Task</h4>
-            <p class="italic mt-1 text-sm">Is a system that drives rapid progress worth the "hidden costs" of stress, secrecy, or wasted resources? How do we find a balance between competing to win and cooperating to survive?</p>
+        <div class="mt-6 border-t border-b border-black py-4">
+            <h4 class="font-sans font-bold text-sm uppercase text-gray-500 text-center mb-2">Key Concepts for Discussion</h4>
+            <div class="concept-grid font-sans">
+                <div class="concept-item">
+                    <strong>Free Market</strong>
+                    An economy based on supply and demand with little government control.
+                </div>
+                <div class="concept-item">
+                    <strong>Ingenuity</strong>
+                    The quality of being clever, original, and inventive to solve problems.
+                </div>
+                <div class="concept-item">
+                    <strong>Transparency</strong>
+                    Being open and honest about processes, allowing mistakes to be seen and fixed.
+                </div>
+                <div class="concept-item">
+                    <strong>Zero-Sum Rivalry</strong>
+                    A situation where for one side to win, the other side must lose.
+                </div>
+            </div>
+            
+            <p class="italic mt-4 text-center text-xs"><strong>Task:</strong> Is a system that drives rapid progress worth the "hidden costs" of stress, secrecy, or wasted resources?</p>
         </div>
     </div>
 
